@@ -1,0 +1,544 @@
+/* ==========================================================================
+   1. General & Global
+   ========================================================================== */
+
+:root {
+    --primary-text-color: #1E1E1E;
+    --secondary-text-color: #F5F3EB;
+    --background-main: #F5F3EB;
+    --accent-green: #8CA089;
+    --nav-glass-bg: rgba(237, 230, 218, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --inner-box-shadow-color: rgba(0,0,0,0.5);
+    --dark-blue: #1A2A33;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background-main);
+    color: var(--primary-text-color);
+}
+
+/* ==========================================================================
+   2. Layout & Sections
+   ========================================================================== */
+
+.container {
+    width: 75vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    align-items: start;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================================================
+   3. Header & Navigation
+   ========================================================================== */
+
+.main-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+
+    background-color: var(--nav-glass-bg);
+    padding: 1rem;
+    border: solid 0.5px var(--glass-border);
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: inset 0px 0px 10px var(--inner-box-shadow-color);
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #1A2A33;
+    transition-duration: 0.5s;
+}
+
+.main-nav ul li a:hover {
+    background-color: rgba(26,42,51,0.25);
+    color: var(--background-main);
+    border: solid 0.5px white;
+    border-radius: 100px;
+    padding: 0.5rem;
+    transition-duration: 0.5s;
+    box-shadow: inset 0px 0px 10px var(--inner-box-shadow-color);
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   4. Typography
+   ========================================================================== */
+
+h1 {
+    font-size: 6rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 5rem;
+    line-height: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.green-text {
+    color: var(--accent-green);
+}
+
+/* ==========================================================================
+   5. Hero Section
+   ========================================================================== */
+
+.hero-section {
+    background-image: url(./images/background.PNG);
+    background-size: cover;
+    height: 85vh;
+    color: var(--background-main);
+}
+
+.hero-section .container {
+    justify-items: center;
+}
+
+.kevin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.designs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================================================
+   6. About Me Section
+   ========================================================================== */
+
+.about-section {
+    padding-bottom: 2rem;
+}
+
+.about-me-text {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.about-me-text p {
+    margin-bottom: 1rem;
+}
+
+.img-me {
+    width: 30vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-self: start;
+    justify-self: end;
+}
+
+/* ==========================================================================
+   7. Projects Section
+   ========================================================================== */
+
+.projects-section {
+    padding: 2rem;
+    color: var(--background-main);
+}
+
+.projects-section .container {
+    background-image: url(./images/background2.png);
+    border-radius: 50px;
+    width: 80vw;
+    padding: 5rem 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-section h3,
+.projects-section p {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.project {
+    background-color: var(--nav-glass-bg);
+    padding: 1rem;
+    border: solid 0.5px var(--glass-border);
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project img {
+    width: 15vw;
+    border-radius: 25px;
+}
+
+.project a {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: var(--accent-green);
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project a:hover {
+    background-color: #7a8c78;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.check-out {
+    background-color: var(--nav-glass-bg);
+    padding: 1rem;
+    border: solid 0.5px var(--glass-border);
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* ==========================================================================
+   8. Contact Section
+   ========================================================================== */
+
+.contact-section {
+    padding: 2rem 0;
+    background-color: var(--background-main);
+    color: var(--primary-text-color);
+}
+
+.contact-section h3 {
+    grid-column-end: span 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.contact-card {
+    margin-bottom: 2rem;
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons a img {
+    width: 64px;
+    height: auto;
+    filter: invert(0%) sepia(0%) saturate(1) hue-rotate(0deg) brightness(0.12) contrast(0.8);
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+    filter: invert(44%) sepia(21%) saturate(542%) hue-rotate(69deg) brightness(97%) contrast(85%);
+}
+
+.contact-form {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--primary-text-color);
+    font-size: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="text"][name="user_subject"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: var(--primary-text-color);
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 0 2px var(--accent-green), 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999999;
+    opacity: 1;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form button[type="submit"] {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: var(--accent-green);
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #7a8c78;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   9. Footer
+   ========================================================================== */
+
+footer {
+    background-color: var(--primary-text-color);
+    color: var(--secondary-text-color);
+    padding: 0.5rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-text {
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   10. Responsive Design (Media Queries)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .contact-form {
+        max-width: 90%;
+        padding: 0 1rem;
+    }
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    .contact-form button[type="submit"] {
+        width: 100%;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    .social-icons a img {
+        width: 40px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .container {
+        width: 90vw;
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 5rem;
+        margin-bottom: 0.5rem; /* Adjusted for closer proximity to h2 */
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 3rem;
+        line-height: normal;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-card {
+        margin-bottom: 1rem;
+    }
+
+    .social-icons a img {
+        width: 64px;
+    }
+
+    .hero-section {
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-section .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 90vw;
+    }
+
+    .img-me {
+        grid-row: 1;
+        width: 60vw;
+        justify-self: center;
+    }
+
+    .projects-section .container {
+        width: 100vw;
+        border-radius: 0px;
+        padding: 2rem 0;
+    }
+
+    .projects-section {
+        padding: 0;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .check-out {
+        max-width: 90vw;
+    }
+
+    .project {
+        margin: 0.5rem 0;
+    }
+    .project img {
+        width: 60vw;
+    }
+
+    .contact-section .container {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    }
+    .contact-section h3 {
+        grid-column-end: span 1; /* Specific adjustment for mobile contact section h3 */
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .contact-me {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .contact-form {
+        padding-top: 0; /* Remove top padding on mobile, spacing controlled by .contact-me margin */
+        width: 100%;
+    }
+}
