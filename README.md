@@ -43,12 +43,11 @@ To view this project locally on your system:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/k3vko/YOUR_REPO_NAME.git](https://github.com/k3vko/YOUR_REPO_NAME.git)
+    git clone [https://github.com/k3vko/my-first-html-css-portfolio.git](https://github.com/k3vko/my-first-html-css-portfolio.git)
     ```
-    *(Note: Replace `YOUR_REPO_NAME` with the actual name of your GitHub repository, e.g., `my-first-portfolio` or `kevin-portfolio-html-css`.)*
 2.  **Navigate into the project directory:**
     ```bash
-    cd YOUR_REPO_NAME
+    cd my-first-html-css-portfolio
     ```
 3.  **Open the `index.html` file** directly in your web browser or use a local development server (e.g., the "Live Server" extension in VS Code).
 
@@ -65,8 +64,8 @@ This is just the beginning! As a web developer in training, I will continuously 
 
 I'm always eager to connect and discuss new opportunities. Whether you have a project in mind, questions about web development, or just want to say hello:
 
-* **GitHub:** [https://github.com/k3vko]
-* **Social Media:** [http://instagram.com/kevintuemmers]
+* **GitHub:** [https://github.com/k3vko](https://github.com/k3vko)
+* **Instagram:** [http://instagram.com/kevintuemmers](http://instagram.com/kevintuemmers)
 
 ---
 
