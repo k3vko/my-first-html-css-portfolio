@@ -146,6 +146,7 @@ p {
 
 .hero-section .container {
     justify-items: center;
+    z-index: 2;
 }
 
 .kevin {

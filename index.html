@@ -120,8 +120,25 @@
             &copy; 2025 Kevin Tümmers. All Rights Reserved.
         </span>
     </footer>
-    
-    	
-    <script src="script.js"></script>
+<script src="BigBlobBg.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+            
+            // Führen Sie die Initialisierung leicht verzögert aus,
+            // um das interne Timing-Problem der Bibliothek zu umgehen.
+            setTimeout(() => {
+                
+                // Wir übergeben den String-Selector, da die Übergabe des Element-Objekts fehlschlug.
+                let colorbg = new Color4Bg.BigBlobBg({
+	            dom: "hero",
+	            colors: ["#000000","#a18268","#ff7300","#372306","#572e00","#8d93a5"],
+	            loop: true
+})
+			
+                
+            }, 50); // 50 Millisekunden sollten ausreichen
+            
+        });
+</script>
 </body>
 </html>
