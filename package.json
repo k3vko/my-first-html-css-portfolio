@@ -1,0 +1,20 @@
+{
+  "name": "my-first-html-css-portfolio",
+  "version": "1.0.0",
+  "description": "This repository holds the source code for my very first personal web developer portfolio. It serves as a practice project to demonstrate my foundational skills in HTML and CSS.",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k3vko/my-first-html-css-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k3vko/my-first-html-css-portfolio/issues"
+  },
+  "homepage": "https://github.com/k3vko/my-first-html-css-portfolio#readme"
+}
