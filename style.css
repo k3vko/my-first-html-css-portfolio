@@ -139,8 +139,7 @@ p {
    ========================================================================== */
 
 .hero-section {
-    background-image: url(./images/background.PNG);
-    background-size: cover;
+    
     height: 85vh;
     color: var(--background-main);
 }
